@@ -1,0 +1,186 @@
+html {
+  background-color: #FF8F8F;
+  font-family: 'Playpen Sans', cursive;
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
+  margin: 0;
+}
+
+
+.form-container {
+  text-align: center;
+}
+
+.input-container {
+  position: relative;
+  margin: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #2ecc71;
+  box-shadow: 0 0 5px rgba(46, 204, 113, 0.8);
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 0 5px;
+  color: #3498db;
+  font-size: 14px;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+input:focus+label,
+input:not(:placeholder-shown)+label {
+  font-size: 12px;
+  transform: translateY(-80%);
+  color: #2ecc71;
+}
+
+#innerTitle{
+  position: relative;
+  
+  bottom: 0;
+}
+
+.innertitle {
+  position: relative;
+  animation: move 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+
+@keyframes move {
+  0% {
+    bottom: 0%;
+  }
+
+  100% {
+    bottom: 20%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #2ecc71;
+}
+
+
+#navbar>h1 {
+  margin: 30px;
+  position: relative;
+  bottom: 10px;
+}
+
+#navbar>img {
+  position: relative;
+  left: 10px;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+
+
+#chatMessages {
+  max-height: 300px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.received {
+  align-self: flex-start;
+  background-color: #DCF8C6;
+  border-radius: 10px;
+  padding: 8px;
+  max-width: 70%;
+}
+
+.sender {
+  font-weight: bold;
+  color: #075E54; /* Color similar to WhatsApp sender's name color */
+}
+
+
+
+
+
+
+
+
+
+
+#navbar {
+  display: inline-block;
+  justify-content: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  height: 50px;
+  width: 100%;
+  background-color: white;
+
+}
+
+
+#block {
+  position: relative;
+  display: inline-block;
+  top: 50px;
+  left: 40%;
+  width: 300px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+
+}

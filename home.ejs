@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <title>ChatBot</title>
+</head>
+
+<body>
+  <div id="navbar">
+    <img src="OIP.jpg" alt="" height="50px" width="50px">
+    <h1 style="display: inline;">PIKACHU</h1>
+  </div>
+
+  <div id="block">
+    <div id="title">
+      <div id="innerTitle">
+        <h1>Pika Pi!!</h1>
+        <p>Your chat assistant</p>
+      </div>
+      <div id="chatMessages" class="chat-box">
+        <% if (response !== 0) { %>
+          <% for(let i=0; i < response.length; i++) { %>
+            <div class="message received">
+              <p><span class="sender">Bot:</span> <%= response[i] %></p>
+            </div>
+          <% } %>
+        <% } %>
+      </div>
+      
+
+
+
+  </div>
+
+
+
+ 
+
+    <form action="/" method="post" class="form-container">
+      <div class="input-container">
+        <input type="text" id="username" name="text" required>
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+
+
+  
+
+
+          </div>
+</body>
+
+<script>
+  const inputField = document.getElementById('username');
+  const title = document.getElementById('innerTitle');
+
+  inputField.addEventListener('focus', () => {
+    title.classList.add('innertitle');
+  });
+
+  inputField.addEventListener('blur', () => {
+    title.classList.remove('innertitle');
+  });
+
+</script>
+
+</html>
